@@ -137,6 +137,45 @@ h3 {
 	top: 0;
 	background-size: cover;
 }
+
+/* Buscador */
+form.search{
+	padding-top: 15px;
+	text-align: right;
+	/*margin-bottom: 30px;*/
+	position: relative;
+}
+
+input.search-input{
+	position: absolute;
+	right: 35px;
+	width: 120px;
+	border: 2px solid #df7900;
+	background-color: transparent;
+	height: 35px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	-webkit-transition: width .8s;
+	-moz-transition: width .8s;
+	transition: width .8s;
+}
+
+input.search-input:focus{
+	width: 400px;
+}
+
+button.search-submit{
+	width: 35px;
+	height: 41px;
+	outline: none;
+	border: none;
+	background-color: #df7900;
+	text-indent: -99999px;
+	background-image: url(img/buscador.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
 /* logo */
 .logo {
 	width: 246px;
