@@ -121,10 +121,10 @@ function html5blank_header_scripts()
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('lightbox', get_template_directory_uri() . '/js/lightbox.min.js', array(), '2.7.1'); // Lightbox
+        wp_register_script('lightbox', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.7.1'); // Lightbox
         wp_enqueue_script('lightbox'); // Enqueue it!
 
-        wp_register_script('bxslider', get_template_directory_uri() . '/js/jquery.bxslider.js', array(), '4.1.1'); // bxslider
+        wp_register_script('bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), '4.2.12'); // bxslider
         wp_enqueue_script('bxslider'); // Enqueue it!
 
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
@@ -150,7 +150,7 @@ function html5blank_styles()
     wp_register_style('lightboxcss', get_template_directory_uri() . '/css/lightbox.css', array(), '1.0', 'all');
     wp_enqueue_style('lightboxcss'); // Enqueue it!
 
-    wp_register_style('bxslidercss', get_template_directory_uri() . '/css/jquery.bxslider.css', array(), '1.0', 'all');
+    wp_register_style('bxslidercss', get_template_directory_uri() . '/css/jquery.bxslider.min.css', array(), '1.0', 'all');
     wp_enqueue_style('bxslidercss'); // Enqueue it!
 
 
@@ -460,6 +460,7 @@ function create_post_type_html5()
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
         'has_archive' => false,
         'menu_position' => 6,
+        'menu_icon' => 'dashicons-admin-site-alt3',
         'supports' => array(
             'title',
             'editor',
@@ -495,6 +496,7 @@ function testimoniales_posttype()
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
         'has_archive' => false,
         'menu_position' => 6,
+        'menu_icon' => 'dashicons-format-quote',
         'supports' => array(
             'title',
             'editor',
@@ -530,6 +532,7 @@ function slider_posttype()
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
         'has_archive' => false,
         'menu_position' => 6,
+        'menu_icon' => 'dashicons-align-center',
         'supports' => array(
             'title',
             'thumbnail',

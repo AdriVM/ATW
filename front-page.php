@@ -16,19 +16,19 @@
 		); ?>
 
     <?php $slider = new WP_Query($args); ?>
-    <ul class="slider">
+    <div class="slider">
         <?php while($slider->have_posts()): $slider->the_post(); ?>
 
-        <li>
+        <div>
             <a href="<?php the_field('enlace'); ?>">
                 <?php the_post_thumbnail('slider'); ?>
             </a>
-        </li>
+        </div>
 
 
         <?php endwhile; wp_reset_postdata(); ?>
 
-    </ul>
+    </div>
 
 </section>
 
