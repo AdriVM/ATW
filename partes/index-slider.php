@@ -10,7 +10,7 @@
     <?php while($slider->have_posts()): $slider->the_post(); ?>
 
     <div>
-        <a href="<?php the_field('enlace'); ?>">
+        <a href="<?php echo get_field('enlace'); ?>">
             <?php the_post_thumbnail('slider'); ?>
         </a>
     </div>

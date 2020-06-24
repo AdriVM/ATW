@@ -201,7 +201,12 @@ button.search-submit{
 	padding: 0 15px;
 	height: 100%;
 	line-height: 73px;
+	transition: all.6s ease;
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
 }
+
+.nav ul li:hover,
 .nav ul li.current_page_item {
 	background-color: #df7900;
 }

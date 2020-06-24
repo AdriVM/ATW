@@ -16,6 +16,7 @@
 				mode: 'fade',
 				auto: true,
 				responsive : true,
+				touchEnabled: false,
 				pager:false
 			});
 
