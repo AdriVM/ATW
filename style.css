@@ -337,6 +337,10 @@ ul.slider {
 	background-position: -43px 10px;
 }
 
+h1, h2, h4, h5, h6{
+	font-family: 'Oxygen', sans-serif!important;
+}
+
 h1 {
 	color: #d4771e;
 	font-size: 34px;
