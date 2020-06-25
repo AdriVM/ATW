@@ -48,7 +48,7 @@ if (function_exists('add_theme_support'))
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
     add_image_size('mediano', 350, 250, true); // Mediano
-    add_image_size('toursDestacado', 523, 294, true); //toursdestacado
+    add_image_size('toursDestacado', 705, 391, true); //toursdestacado
     add_image_size('toursPrincipal', 751, 422, true);
     add_image_size('principalBlog', 1100, 404,true);
     add_image_size('slider', 2000, 600, true);
@@ -129,6 +129,9 @@ function html5blank_header_scripts()
         wp_register_script('bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), '4.2.12'); // bxslider
         wp_enqueue_script('bxslider'); // Enqueue it!
 
+        wp_register_script('slicknav-mobile-menu', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '1.0.10'); // bxslider
+        wp_enqueue_script('slicknav-mobile-menu'); // Enqueue it!
+
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
     }
@@ -154,6 +157,9 @@ function html5blank_styles()
 
     wp_register_style('bxslidercss', get_template_directory_uri() . '/css/jquery.bxslider.min.css', array(), '1.0', 'all');
     wp_enqueue_style('bxslidercss'); // Enqueue it!
+
+    wp_register_style('slicknav-mobile-menu-css', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0.10');
+    wp_enqueue_style('slicknav-mobile-menu-css'); // Enqueue it!
 
     wp_register_style('oxygen-font', 'https://fonts.googleapis.com/css2?family=Oxygen&display=swap', array(), '1.0', 'all');
     wp_enqueue_style('oxygen-font');
