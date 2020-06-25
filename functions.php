@@ -32,7 +32,7 @@ function admin_styles() {
       )
     );
   }
-  add_action('login_enqueue_scripts', 'admin_styles', 10 );
+  add_action('login_enqueue_scripts', 'admin_styles', 10 ); //la prioridad define cual se ejecuta primero
 
 
 if (!isset($content_width))

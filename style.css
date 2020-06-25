@@ -425,8 +425,14 @@ ul.slider {
 .bx-wrapper .bx-controls-direction a {
   width: 44px;
   height: 84px;
-  /*top: 50%;*/
+  top: 30%!important;
 }
+@media only screen and (min-width:768px){
+	.bx-wrapper .bx-controls-direction a {
+		top: 50%!important;
+	  }
+}
+
 .bx-wrapper .bx-viewport {
 	left: 0;
 	box-shadow: none;
@@ -435,6 +441,7 @@ ul.slider {
 	/*height: 572px;*/
 }
  
+
 .bx-wrapper .bx-prev, 
 .bx-wrapper .bx-prev:hover{
 	background-position: 0 10px;
@@ -446,6 +453,9 @@ ul.slider {
 	right: 30px;
 	background-position: -43px 10px;
 }
+
+
+
 
 h1, h2, h4, h5, h6{
 	font-family: 'Oxygen', sans-serif!important;
