@@ -4,29 +4,33 @@
  */
  get_header(); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section class="clear">
+<main role="main">
+    <!-- section -->
+    <section class="clear">
 
-			<h1><span><?php the_title(); ?></span></h1>
+        <h1><span><?php the_title(); ?></span></h1>
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class('grid2-3'); ?>>
+        <!-- article -->
+        <article id="post-<?php the_ID(); ?>" <?php post_class('grid2-3'); ?>>
 
-				<?php the_content(); ?>
-			
-				<br class="clear">
+            <?php the_content(); ?>
 
-				<?php edit_post_link(); ?>
+            <br class="clear">
 
-			</article>
-			<!-- /article -->
+            <?php 
+				if (current_user_can('administrator')) {
+					edit_post_link(); 
+				}
+			?>
 
-			<div class="galeria-nosotros grid1-3">
-				<div class="foto">
-					<?php 
+        </article>
+        <!-- /article -->
+
+        <div class="galeria-nosotros grid1-3">
+            <div class="foto">
+                <?php 
 						$imagen = get_field('imagen_1');
 						$size = 'mediano';
 
@@ -34,10 +38,10 @@
 							echo wp_get_attachment_image($imagen, $size, false, array('class' => 'fotografia'));
 						}
 					?>
-				</div>
+            </div>
 
-				<div class="foto">
-					<?php 
+            <div class="foto">
+                <?php 
 						$imagen = get_field('imagen_2');
 						$size = 'mediano';
 
@@ -45,26 +49,26 @@
 							echo wp_get_attachment_image($imagen, $size, false, array('class' => 'fotografia'));
 						}
 					?>
-				</div>
-			</div>
+            </div>
+        </div>
 
-		<?php endwhile; ?>
+        <?php endwhile; ?>
 
-		<?php else: ?>
+        <?php else: ?>
 
-			<!-- article -->
-			<article>
+        <!-- article -->
+        <article>
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+            <h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
-			</article>
-			<!-- /article -->
+        </article>
+        <!-- /article -->
 
-		<?php endif; ?>
+        <?php endif; ?>
 
-		</section>
-		<!-- /section -->
-	</main>
+    </section>
+    <!-- /section -->
+</main>
 
 <?php //get_sidebar(); ?>
 

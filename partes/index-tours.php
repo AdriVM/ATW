@@ -15,7 +15,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('grid1-3'); ?>>
 
     <div class="imagen-destacada">
-        <?php the_post_thumbnail('toursDestacado'); ?>
+        <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail('toursDestacado'); ?>
+        </a>
         <a class="mas-info" href="<?php the_permalink(); ?>">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/masinfo.png">
         </a>

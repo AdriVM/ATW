@@ -45,7 +45,11 @@
 
                 <?php comments_template(); ?>
 
-                <?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+                <?php 
+				if (current_user_can('administrator')) {
+					edit_post_link(); 
+				}
+			?>
 
             </div>
 

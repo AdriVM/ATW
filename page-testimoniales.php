@@ -49,16 +49,24 @@
         <div class="contacto-testimoniales grid1-3">
             <h3>Envíanos tu testimonial</h3>
             <?php echo do_shortcode('[contact-form-7 id="118" title="Formulario Testimoniales"]'); ?>
+            <?php 
+            if (current_user_can('administrator')) {
+                ?>
+            <br class="clear">
+            <?php edit_post_link(); ?>
+            <?php    
+                }
+            ?>
         </div>
 
 
-        <br class="clear">
 
 
 
 
 
-        <?php edit_post_link(); ?>
+
+
 
 
         <?php endwhile; ?>

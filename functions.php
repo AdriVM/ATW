@@ -35,6 +35,15 @@ function admin_styles() {
   add_action('login_enqueue_scripts', 'admin_styles', 10 ); //la prioridad define cual se ejecuta primero
 
 
+  
+function bld_ocultar_admin_bar() {
+    if (!current_user_can('administrator')){
+        add_filter( 'show_admin_bar', '__return_false' );
+    }
+}
+add_action('after_setup_theme', 'bld_ocultar_admin_bar');
+
+
 if (!isset($content_width))
 {
     $content_width = 900;
